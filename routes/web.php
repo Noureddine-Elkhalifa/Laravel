@@ -23,3 +23,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/",function(){return "Bienvenu sur notre site";});
 
+
+
