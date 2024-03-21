@@ -5,6 +5,7 @@ use App\Http\Controllers\calculCOntroller;
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\equipeController;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\packagesController;
 use App\Http\Controllers\PersonneController;
 use App\Http\Controllers\ProjetController;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get("/",function(){return "Bienvenu sur branch main";});
+
+Route::get('/',function(){
+    return view('pages.accueil');
+
+});
+
+Route::get('/apropos',function(){
+    return view('pages.apropos');
+
+});
+
+Route::get('/package',[packagesController::class,"getPackages"]);
+
 
 
 
